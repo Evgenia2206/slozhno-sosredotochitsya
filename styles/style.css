@@ -42,22 +42,22 @@
   border-block-end: 1px solid var(--print-color, #353430);
 }
 
- .header__theme-menu {
+.header__theme-menu {
   box-sizing: border-box;
   justify-self: end;
- }
+}
 
- .header__theme-menu-list {
+.header__theme-menu-list {
   display: flex;
   flex-direction: column;
   row-gap: 11.5px;
- }
+}
 
 .header__theme-menu-item {
   text-align: center;
 }
 
- .header__theme-menu-button {
+.header__theme-menu-button {
   display: grid;
   inline-size: 70px;
   block-size: 26px;
@@ -69,26 +69,26 @@
   font-weight: normal;
   line-height: 100%;
   cursor: pointer;
- }
+}
 
- .header__theme-menu-button_active {
+.header__theme-menu-button_active {
   border: 1px solid var(--print-color, #353430);
   pointer-events: none;
- }
+}
 
- .header__theme-menu-button:hover {
+.header__theme-menu-button:hover {
   border: 1px solid var(--hover-color, #32312d80);
- }
+}
 
- .header__theme-menu-button:focus {
+.header__theme-menu-button:focus {
   outline: none;
- }
+}
 
- .header__theme-menu-button:focus-visible {
+.header__theme-menu-button:focus-visible {
   border-block-end: 1px solid var(--print-color, #353430);
- }
+}
 
- .header__title {
+.header__title {
   display: block;
   font-family: 'IBM Plex mono', sans-serif;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -96,13 +96,13 @@
   line-height: 82.5%;
   color: var(--title-color, #ffc2e6);
   text-shadow: 4px 4px 0 var(--accent-color, #ff8dcb);
- }
+}
 
- .header__text_wrap {
+.header__text_wrap {
   display: block;
- } 
+} 
 
- .header__text {
+.header__text {
   box-sizing: border-box;
   font-family: 'IBM Plex mono', sans-serif;
   font-size: 18px;
@@ -110,15 +110,15 @@
   line-height: 130%;
   color: var(--print-color, #353430);
   block-size: fit-content;
- }
+}
 
 .header__text:has(.header__text_wrap) {
   margin: 55px 0px;
 }
 
- .title-decor {
+.title-decor {
   background-color: var(--accent-color, #ff8dcb);
- }
+}
 
 .content {
   display: grid;
@@ -126,42 +126,42 @@
   gap: 50px;
 }
 
- .content-section {
+.content-section {
   display: grid;
- }
+}
 
- .content-section:not(:last-child) {
+.content-section:not(:last-child) {
   gap: 20px;
- }
+}
 
- .content-section__text {
+.content-section__text {
   font-family: 'IBM Plex mono', sans-serif;
   font-size: 18px;
   line-height: 130%;
   color: var(--print-color, #353430);
   padding: 10px 0px 0px;
- }
+}
 
- .content__link {
+.content__link {
   text-decoration: none;
   text-shadow: 2px 1px 0 var(--accent-color, #ff8dcb);
- }
+}
 
- .content__link:hover {
+.content__link:hover {
   border-block-end: 2px solid var(--print-color, #353430);
- }
+}
 
- .content__link:focus {
+.content__link:focus {
   outline: none;
- }
+}
 
- .content__link:focus-visible {
+.content__link:focus-visible {
   outline: 1px solid var(--print-color, #353430);
- }
+}
 
- .content-section__header {
+.content-section__header {
   font-weight: inherit;
- }
+}
 
 .content-section__gallery {
   display: grid;
@@ -169,20 +169,20 @@
   margin-block-start: 10px;
 }
 
- .content-section__picture {
+.content-section__picture {
   display: block;
   max-inline-size: 100%;
   block-size: auto;
- }
+}
 
- .footer {
+.footer {
   display: grid;
   position: relative;
   min-block-size: 100vh;
   padding: 10px;
- }
+}
 
- .footer__title {
+.footer__title {
   display: grid;
   justify-content: center;
   font-family: 'IBM Plex mono', sans-serif;
@@ -192,30 +192,6 @@
   color: var(--title-color, #ffc2e6);
   text-shadow: 2px 2px 0 var(--accent-color, #ff8dcb);
   align-self: center;
- }
-
- .decorated-zone::before {
-  content: "";
-  display: flex;
-  position: absolute;
-  inset-block-start: 10px;
-  inset-inline-end: 10px;
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-start: 1px solid var(--print-color, #353430);
-  border-inline-end: 1px solid var(--print-color, #353430);
-}
-
-.decorated-zone::after {
-  content: "";
-  display: flex;
-  position: absolute;
-  inset-inline-start: 10px;
-  inset-block-end: 10px;
-  inline-size: 25px;
-  block-size: 25px;
-  border-inline-start: 1px solid var(--print-color, #353430);
-  border-block-end: 1px solid var(--print-color, #353430);
 }
 
 @media (768px <= width) {

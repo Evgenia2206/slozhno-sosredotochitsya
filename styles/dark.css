@@ -1,4 +1,4 @@
-.page.theme_dark {  
+.page.theme_dark {
   --accent-color: #ff0070;
   --background-color: #00183F;
   --title-color: #db00ff;
@@ -6,16 +6,6 @@
   --hover-color: #ff007066;
   --background-image: url(../images/cover-image-dark.png);
 }
-
-.page.theme_dark .decorated-zone::before {
-    border-block-start: 1px solid var(--accent-color, #ff0070);
-    border-inline-end: 1px solid var(--accent-color, #ff0070);
-  }
-
-  .page.theme_dark .decorated-zone::after {
-    border-inline-start: 1px solid var(--accent-color, #ff0070);
-    border-block-end: 1px solid var(--accent-color, #ff0070);
-  }
 
   .page.theme_dark .header__theme-menu-button_active {
     border: 1px solid var(--accent-color, #ff0070);
@@ -72,25 +62,15 @@
   }
 
   .page.theme_dark .decorated-zone::before {
-    content: "";
-    display: flex;
-    position: absolute;
     inset-block-start: 20px;
     inset-inline-end: 20px;
-    inline-size: 25px;
-    block-size: 25px;
     border-block-start: 1px solid var(--accent-color, #ff0070);
     border-inline-end: 1px solid var(--accent-color, #ff0070);
   }
   
   .page.theme_dark .decorated-zone::after {
-    content: "";
-    display: flex;
-    position: absolute;
     inset-inline-start: 20px;
     inset-block-end: 20px;
-    inline-size: 25px;
-    block-size: 25px;
     border-inline-start: 1px solid var(--accent-color, #ff0070);
     border-block-end: 1px solid var(--accent-color, #ff0070);
   }
@@ -122,7 +102,7 @@
     --accent-color: #ff0070;
     --background-color: #00183F;
     --title-color: #db00ff;
-    --print-color: #f1b2ce;  
+    --print-color: #f1b2ce;
     --hover-color: #ff007066; 
     --background-image: url(../images/cover-image-dark.png);
   }
