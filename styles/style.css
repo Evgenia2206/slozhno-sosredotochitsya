@@ -1,5 +1,392 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--background-color, #fff1f7);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header {
+  display: grid;
+  min-block-size: 100vh;
+  grid-template-rows: 0 1fr min-content 1fr;
+  align-items: center;
+  padding: 10px;
+  }
+
+.decorated-zone::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--print-color, #353430);
+  border-inline-end: 1px solid var(--print-color, #353430);
+}
+
+.decorated-zone::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--print-color, #353430);
+  border-block-end: 1px solid var(--print-color, #353430);
+}
+
+ .header__theme-menu {
+  box-sizing: border-box;
+  justify-self: end;
+ }
+
+ .header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 11.5px;
+ }
+
+.header__theme-menu-item {
+  text-align: center;
+}
+
+ .header__theme-menu-button {
+  display: grid;
+  inline-size: 70px;
+  block-size: 26px;
+  background-color: inherit;
+  border: none;
+  text-transform: lowercase;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 100%;
+  cursor: pointer;
+ }
+
+ .header__theme-menu-button_active {
+  border: 1px solid var(--print-color, #353430);
+  pointer-events: none;
+ }
+
+ .header__theme-menu-button:hover {
+  border: 1px solid var(--hover-color, #32312d80);
+ }
+
+ .header__theme-menu-button:focus {
+  outline: none;
+ }
+
+ .header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--print-color, #353430);
+ }
+
+ .header__title {
+  display: block;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%;
+  color: var(--title-color, #ffc2e6);
+  text-shadow: 4px 4px 0 var(--accent-color, #ff8dcb);
+ }
+
+ .header__text_wrap {
+  display: block;
+ } 
+
+ .header__text {
+  box-sizing: border-box;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 130%;
+  color: var(--print-color, #353430);
+  block-size: fit-content;
+ }
+
+.header__text:has(.header__text_wrap) {
+  margin: 55px 0px;
+}
+
+ .title-decor {
+  background-color: var(--accent-color, #ff8dcb);
+ }
+
+.content {
+  display: grid;
+  padding: 40px 10px;
+  gap: 50px;
+}
+
+ .content-section {
+  display: grid;
+ }
+
+ .content-section:not(:last-child) {
+  gap: 20px;
+ }
+
+ .content-section__text {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--print-color, #353430);
+  padding: 10px 0px 0px;
+ }
+
+ .content__link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color, #ff8dcb);
+ }
+
+ .content__link:hover {
+  border-block-end: 2px solid var(--print-color, #353430);
+ }
+
+ .content__link:focus {
+  outline: none;
+ }
+
+ .content__link:focus-visible {
+  outline: 1px solid var(--print-color, #353430);
+ }
+
+ .content-section__header {
+  font-weight: inherit;
+ }
+
+.content-section__gallery {
+  display: grid;
+  gap: 10px;
+  margin-block-start: 10px;
+}
+
+ .content-section__picture {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+ }
+
+ .footer {
+  display: grid;
+  position: relative;
+  min-block-size: 100vh;
+  padding: 10px;
+ }
+
+ .footer__title {
+  display: grid;
+  justify-content: center;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%;
+  color: var(--title-color, #ffc2e6);
+  text-shadow: 2px 2px 0 var(--accent-color, #ff8dcb);
+  align-self: center;
+ }
+
+ .decorated-zone::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--print-color, #353430);
+  border-inline-end: 1px solid var(--print-color, #353430);
+}
+
+.decorated-zone::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--print-color, #353430);
+  border-block-end: 1px solid var(--print-color, #353430);
+}
+
+@media (768px <= width) {
+  .header__title, .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__title {
+    position: relative;
+    left: -17px;
+  }
+
+  .content {
+    padding: 60px 20px;
+    gap: 80px;
+  }
+
+  .footer__title {
+    justify-content: center;
+  }
+
+  .header, .footer {
+    padding: 20px;
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+  }
+
+  .header__text:has(.header__text_wrap) {
+    inline-size: 50%;
+    justify-self: end;
+  }
+  
+  .section-1 .header__text:first-child {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  
+  .section-3 .header__text:first-child {
+    grid-row-start: 1;
+    grid-row-end: 7;
+  }
+
+  .content-section__gallery {
+    display: grid;
+    margin-block-start: 20px;
+    gap: 20px;
+    grid-template-columns: repeat(3, calc((100% - 40px) / 3));
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .content-section__gallery__picture-1 {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .content-section__gallery__picture-2 {
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .content-section__gallery__picture-3 {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .content-section__gallery__picture-4 {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .content-section__gallery__picture-5 {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .content-section__picture {
+    object-fit: cover;
+    object-position: center;
+    inline-size: 100%;
+    block-size: 100%;
+  }
+ }
+
+@media (768px <= width < 1024px) {
+  .section-1 {
+    grid-template-columns: calc((100% - 20px) / 3) 2fr;
+  }
+
+  .section-2 > .header__text {
+    inline-size: calc((100% - 60px) / 3);
+  }
+
+  .section-3 {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(6, auto);
+  }
+}
+
+@media (1024px <= width) {
+  .header__title, .footer__title {
+    text-shadow: 2px 2px 0 #ff0070;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    column-gap: 11.5px;
+  }
+
+  .header__theme-menu {
+    display: grid;
+    justify-self: center;
+    align-self: start;
+  }
+
+  .section-1 {
+    grid-template-columns: calc((100% - 40px) / 3) 2fr;
+  }
+
+  .section-2 > .header__text {
+    grid-area: section-2-header;
+  }
+
+  .section-2__article-1 {
+    grid-area: section-2__article-1;
+  }
+
+  .section-2__article-2 {
+    grid-area: section-2__article-2;
+  }
+
+  .section-2__article-3 {
+    grid-area: section-2__article-3;
+  }
+
+  .section-2 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+    "section-2-header . ."
+    "section-2__article-1 section-2__article-2 section-2__article-3"
+  }
+
+  .section-3 {
+    grid-template-columns: calc((100% - 40px) / 3) 2fr;
+    grid-template-rows: repeat(6, auto);
+  }
+
+  .content-section__gallery__picture-5 {
+    padding-block-start: 5px;
+  }
 }
