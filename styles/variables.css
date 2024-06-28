@@ -3,6 +3,9 @@
   --background-color: #fff1f7;
   --title-color: #ffc2e6;
   --print-color: #353430;
+  --header-color: #353430;
+  --decor-color: #353430;
   --hover-color: #32312d80;
+  --display: none;
   --background-image: url(../images/cover-image-light.png);
 }
